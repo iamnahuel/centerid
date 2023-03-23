@@ -1,0 +1,68 @@
+.movimientoPagos {
+    background-color: white;
+    border-radius: 5px;
+    margin: 15px;
+    margin-top: 100px;
+    padding: 40px;
+
+}
+
+.encabezadoPagos{
+    background-color: red;
+    height: 80px;
+    border-radius: 5px;
+    display: flex;
+   align-items: center;
+}
+.titoloEncabezado{
+    color: white;
+    font-size: 18px;
+    margin: 40px;
+}
+.movimientosCerrar{
+    display: flex;
+    justify-content: space-between;
+}
+.cerrar{
+    text-decoration: none;
+    color: black;
+    
+}
+.cerrar:hover{
+    color: red;
+}
+.contenedorIconoCuotaPaga{
+    border: solid 2px green;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;   
+}
+.contenedorIconoCuota{
+    border: solid 2px red;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.iconosCuota{
+    height: 25px;
+    
+}
+
+.cardCuota{
+    background-color: blue;
+    border-radius: 5px;
+    height: 300px;
+    width: 500px;
+}
+.modal-header{
+    background-color: #003290;
+    color: white;
+}

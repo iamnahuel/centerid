@@ -1,0 +1,71 @@
+.containerLogin {
+    display: flex;
+  
+}
+
+/********* ESTILOS LOGIN *********/
+.login {
+    padding: 40px;
+}
+
+.titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+   
+}
+
+.taxtoId {
+    color: yellow;
+}
+
+.subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    color: white;
+}
+
+.ingreseasucuenta{
+    color: white;
+}
+.btnIngresar {
+    background-color: #003290 !important;
+    color: white;
+    width: 100%;
+}
+
+.fromBtn {
+    margin-top: 15px;
+}
+
+.contraseñaOlvidada {
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+
+}
+
+.contraseñaOlvidada:hover {
+    color: #003290;
+}
+
+.contenedorContraseñaOlvidada {
+    margin-top: 10px;
+}
+
+/********* ESTILOS  IMGLOGIN *********/
+.contenedorImgLogin {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.imgLogin {
+    border-radius: 10px;
+    height: 700px;
+}
+
+/***********media qery para hacerlo responsive***********/
+@media only screen and (max-width: 600px) {
+    .imgLogin {
+        display: none;
+    }
+}

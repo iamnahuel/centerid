@@ -1,0 +1,39 @@
+.contenedorAgregarSocio {
+    margin: 20px;
+    margin-left: 60px;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+label {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11.2px;
+    font-weight: normal;
+}
+
+.infoFormulario {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.campoCompartido {
+    display: flex;
+}
+
+.inputCel,
+.inputDireccion {
+    margin-right: 5px;
+}
+
+.btn {
+    margin-top: 20px;
+    background-color: #003290;
+    border: none;
+}
+.oIcompleto{
+    color:  red;
+}

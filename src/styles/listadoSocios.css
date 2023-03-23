@@ -1,0 +1,42 @@
+.contenedorTabla {
+    margin: 20px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.datosSocio {
+    display: flex;
+    justify-content:space-around;
+}
+
+.iconoeditar{
+    height: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.spanDatosSocio{
+    display: flex;
+   justify-content: space-between;
+   
+}
+ul{
+    list-style: none;
+}
+.numeroresultado{
+    color: white;
+}
+
+/***********media qery para hacerlo responsive***********/
+@media only screen and (max-width: 600px) {
+    .col-1{
+        font-size: 9px;
+    }
+    .contenedorTabla {
+        margin: 1px;
+       
+    }
+  
+}

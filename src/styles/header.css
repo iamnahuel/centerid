@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header1 {
+    background-color: #003290;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 15px;
+}
+
+.logoEncabezado {
+    width: 70px;
+    margin-left: 15px;
+}
+
+.textoEncabezado {
+    width: 300px;
+    margin-left: 15px;
+
+}
+
+.menudesplegable {
+    visibility: hidden;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .logoEncabezado {
+        width: 40px;
+        margin-left: 5px;
+    }
+
+    .textoEncabezado {
+        width: 140px;
+        margin-left: 5px;
+
+    }
+
+    .menudesplegable {
+        visibility: visible;
+    }
+    
+
+}

@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.contenedorWallpapar {
+    position: sticky;
+    top: 0;
+    z-index: -2;
+}
+
+.wallpapar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    position: relative;
+
+}
+
+
+/***********ESTILOS MENU ADMINISTRACION***********/
+
+.contenedorAdministracion {
+
+    display: flex;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    /*top: -1000px; */
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    
+}
+
+.titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+.datosPerfil {
+    display: flex;
+}
+
+.nombre {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: yellow;
+}
+
+.tipoSocio {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+.imgPerfil {
+    height: 80px;
+    border-radius: 100%;
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .imgPerfil {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .contenedorAdministracion {
+        display: flex;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        background-color: black;
+
+    }
+
+    .panelAdmin {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+        display: flex
+    }
+
+}
+
+
+
+.contenedorTabla {
+    width: 100%;
+
+}
+
+.ulMenu {
+    list-style: none;
+    cursor: pointer;
+}
+
+li {
+    color: white;
+    font-weight: 600;
+}
+
+li:hover {
+    color: yellow;
+}
+
+.flechaMenu {
+    float: right;
+    margin-right: 5px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: yellow;
+}
+
+/***********ESTILOS PANEL ADMINISTRACION***********/
+
+/***********ESTILOS PUBLICIDAD ADMINISTRACION***********/
