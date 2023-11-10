@@ -1,0 +1,50 @@
+
+.estadisticasCobros{
+    display: flex;
+    margin-left: 40px;
+    flex-wrap: wrap;
+}
+
+.añosCobros{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.terjetCobrador{
+    height: 190px;
+    width: 350px;
+    background-color: black;
+    border: solid 2px  yellow;
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+.nombreCobrador{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px;
+    text-align: center;
+    
+}
+
+.contendedorCobrosDetalles{
+    display: flex;
+    background-color: #003290;
+    margin: 15px;
+}
+.cobrosDetalles{
+    width: 200px;
+    height: 120px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    padding-top: 15px;
+    color: white;
+    text-align: center;
+}
+
+.detallesNumerosCobros{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    padding-top: 15px;
+    color: white;
+    text-align: center;
+}

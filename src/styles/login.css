@@ -1,11 +1,13 @@
 .containerLogin {
     display: flex;
+   
   
 }
 
 /********* ESTILOS LOGIN *********/
 .login {
     padding: 40px;
+    
 }
 
 .titulo {

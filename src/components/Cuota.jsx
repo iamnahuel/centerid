@@ -26,13 +26,11 @@ const Cuota = (item) => {
                         <td className="col-2">{item.item.ncuota}</td>
                         <td className="col-2">{item.item.año}</td>
                         <td className="col-2">${item.item.monto}</td>
-                        <td className="col-2">{item.item.pagado == "Adeuda" ? "Adeuda" : "Pagado"}</td>
-                        <td className="col-2">
-                            {item.item.pagado == "Adeuda" ? "-" : date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()}
-                        </td>
+                        <td className="col-2">{item.item.pagado == false ? "Adeuda" : "Pagado"}</td>
+                        
                         <td className="col-2">
 
-                            {item.item.pagado == "Adeuda" ?
+                            {item.item.pagado == false ?
                                 <div className="contenedorIconoCuota" onClick={() => editar_modal(item)} data-bs-toggle="modal" data-bs-target="#exampleModal"> <img className="iconosCuota"
                                     src={Cobro} alt="red social intagram" title="redes sociales" />
                                 </div> :
@@ -83,7 +81,7 @@ const Cuota = (item) => {
                                     <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 
                                     {
-                                        propsModal.pagado == "Adeuda" ? <button type="button" id="btncobrar" className="btn btn-primary" onClick={() => cobrarCuota(propsModal)}>Cobrar</button>
+                                        propsModal.pagado == false ? <button type="button" id="btncobrar" className="btn btn-primary" onClick={() => cobrarCuota(propsModal)}>Cobrar</button>
                                             :
                                             <PDFDownloadLink
                                                 document={<PdfModal props={propsModal} />}

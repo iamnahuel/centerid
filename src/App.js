@@ -5,14 +5,17 @@ import Login from './components/Login';
 import Header from './components/Header';
 import Admin from './components/Admin';
 import Provider from './components/Context/Context';
+import { ChakraProvider } from '@chakra-ui/react';
 
 function App() {
   return (
     <div className="App">
       <Provider>
-        <Header />
-        <Admin />
-        <Footer />
+        <ChakraProvider>
+          <Header />
+          <Admin />
+          <Footer />
+          </ChakraProvider>
       </Provider>
     </div>
   );

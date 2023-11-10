@@ -1,9 +1,9 @@
 .movimientoPagos {
     background-color: white;
     border-radius: 5px;
-    margin: 15px;
+    margin: 30px;
     margin-top: 100px;
-    padding: 40px;
+    padding: 20px;
 
 }
 
@@ -66,3 +66,20 @@
     background-color: #003290;
     color: white;
 }
+
+/********* MEDIA QUERRY *********/
+
+@media only screen and (min-width: 900px) {}
+
+@media only screen and (max-width: 600px) {
+    .movimientoPagos {
+       
+        margin: 20px;
+       width: 90%;
+        
+    
+    }
+}
+
+
+@media only screen and (max-width: 900px) {}

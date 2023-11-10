@@ -1,7 +1,45 @@
-.cerrarBusqueda{
+
+.contenedorBuscarSocio{
+   
+    margin: 20px;
+}
+.cerrarBusqueda {
     text-decoration: none;
-    color:red;
-    margin-left: 20px;
+    color: red;
     cursor: pointer;
+    font-size: small;
+   
+}
+
+/***********resultados busqueda***********/
+.resultadoBusqueda{
+    
+    width: 100%;
+    
+    
+}
+
+
+.link {
+    text-decoration: none;
+}
+
+.datosSocio {
+    display: flex;
+    justify-content:space-around;
+}
+
+
+.numeroresultado{
+    color: white;
+}
+
+/***********media qery para hacerlo responsive***********/
+@media only screen and (max-width: 600px) {
+    .col-2{
+        font-size: 8px;
+    }
+   
+  
 }
 

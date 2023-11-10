@@ -41,8 +41,8 @@ const Cuotas = (items) => {
         <div className="cuotas">
             <div className="cuota">
                 <div className="encabezadoBeneficios">
-                    <h3 className="montoCuot">{items.props.categoria}</h3>
-                    <h2 className="beneficiosCuota"><b>Beneficios</b></h2>
+                    <h3 className="tipoCuota"><b>{items.props.categoria}</b></h3>
+                    <h2 className="beneficios"><b>Beneficios</b></h2>
                 </div>
                 <div className="contenedorBeneficios">
                     <div className="col-6">
@@ -68,8 +68,12 @@ const Cuotas = (items) => {
                 </div>
                 <div className="footerBeneficios">
                     <span className="montoCuot"> <b>${items.props.valor}</b> al año</span>
+                    <div>
+                    <button type="button" class="btn btn-primary btnEliminar">Eliminar</button>
                     <button type="submit" class="btn btn-primary btnModificar" onClick={() => modal(items.props)} data-bs-toggle="modal" data-bs-target="#modalCuota" >Modificar</button>
-                </div>
+                
+                    </div>
+                   </div>
             </div>
 
 

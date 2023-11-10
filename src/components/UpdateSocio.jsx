@@ -62,10 +62,10 @@ const UpdateSocio = (items) => {
 
     return (
         <div className="contUpdateSocio">
-            <p>Tu nombre, apellido, DNI, nacionalidad, género, fecha de nacimiento y dirección fueron
+            <span className="introUpdateSocio">Tu nombre, apellido, DNI, nacionalidad, género, fecha de nacimiento y dirección fueron
                 validados con el Registro Nacional de las Personas. En caso de que hayas actualizado
                 algunos de estos datos frente a dicho organismo, hacé click aquí para actualizarlos
-                en tu Center ID.</p>
+                en tu Center ID.</span>
             <div className="updateSocio">
                 <p className="oIcompleto">{incompleto}</p>
                 <label className="labelModalCuota">Cel:</label>
@@ -81,7 +81,11 @@ const UpdateSocio = (items) => {
                 <input type="text" className="form-control" id="inputDocumento" value={ciudad} onChange={event => { setCiudad(event.target.value) }} />
                 <br />
                 <hr />
-                <button onClick={() => modEditarSocio()} className="btn btn-primary col-3 btnUpdateSocios" >Cerrar</button><button onClick={() => ValidarCamposSocio()} className="btn btn-primary col-4 btnUpdateSocios" >Actualizar</button>
+                <div className="btnUpdateSocio">
+                    <button onClick={() => modEditarSocio()} className="btn btn-primary col-3 btnUpdateSocios" >Cerrar</button>
+                    <br />
+                    <button onClick={() => ValidarCamposSocio()} className="btn btn-primary col-4 btnUpdateSocios" >Actualizar</button>
+                </div>
             </div>
 
         </div >

@@ -196,9 +196,8 @@ const AgregarSocio = () => {
                                 <label for="inputDocumento">Documento</label>
                                 <input type="number" className="form-control" id="inputDocumento" placeholder="Documento" onInput={(e) => setDocumento(e.currentTarget.value)} />
                             </div>
-                            <div className="col-4">
+                            <div className="col-4  nacimiento">
                                 <label for="inputDocumento">Nacimiento</label>
-
                                 <input type="date" name="fechaesperada" id="inputNacimiento" className="form-control" onInput={(e) => setNacimiento(e.target.value)}></input>
                             </div>
                         </div>

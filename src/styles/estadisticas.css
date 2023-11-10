@@ -1,3 +1,16 @@
-h5{
+.estadisticas{
+    display: flex;
+    margin: 40px;
+    flex-wrap: wrap;
+
+}
+
+.grafico {
+    margin: 30px;
+    width: 300px;
+    height: 400px;
+}
+
+.titulo{
     color: white;
 }

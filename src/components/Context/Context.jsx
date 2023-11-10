@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { createContext } from "react";
 import { getFirestore, getDocs, collection, query, where, doc, getDoc, addDoc, updateDoc } from "firebase/firestore";
+import { getStorage, ref, uploadBytes } from "firebase/storage";
 import { Await } from "react-router-dom";
 
 export const CartContext = createContext();
@@ -126,7 +127,6 @@ const Provider = ({ children }) => {
     }
     //---------------Pausar Socio
     async function pausarSocio(props) {
-        console.log(props);
         //nos conectamos a la base de datos socio
         const dbsocio = getFirestore();
         //modificamos el campo pagado del la bases de datos socio con el id pasado
@@ -136,7 +136,7 @@ const Provider = ({ children }) => {
         });
         setRecargarCuota(recargarCuota + 1)
     }
-    
+
     //---------------Recategorizar Socio
     async function recategorizar(props) {
 
@@ -164,20 +164,32 @@ const Provider = ({ children }) => {
         }
     }
 
+    //---------------cargar foto perfil usuario
+    const storage = getStorage();
+    //const nameme = "Fernanda"
+    function uploadFile(file, nombre) {
+        
+        const storageRef = ref(storage, nombre);
+        uploadBytes(storageRef, file).then(snapShot => {
+            // console.log(snapShot);
+        })
+        setRecargarCuota(recargarCuota + 1)
+    }
+
     //////////////////////////////CUOTAS SOCIOS//////////////////////////////
 
     //---------------crear cuota social
     const crearCuota = (props) => {
-        console.log(props);
         const db = getFirestore();
         const orderCollection = collection(db, "cuotasocio");
         var y = new Date().getFullYear();
         const monto = calcularCuota(props.tsocio);
 
-        const datos = { pagado: "Adeuda", dni: props.dni, año: y, fecha: Date.now(), ncuota: 1, idcobrador: 0, monto: monto, intereses: 0, montoFinal: 0, tsocio: props.tsocio }
+        const datos = { pagado: false, dni: props.dni, año: y, fecha: Date.now(), ncuota: 1,  monto: monto, intereses: 0, montoFinal: 0, tsocio: props.tsocio }
         addDoc(orderCollection, datos).then((data) => {
 
         })
+        setRecargarCuota(recargarCuota + 1)
 
     }
     //---------------conexion db coutasocio
@@ -202,7 +214,7 @@ const Provider = ({ children }) => {
             idcobrador: admin[0].dni,
             montoFinal: props.intereses + props.monto,
             intereses: props.intereses,
-            fecha:  Date.now()
+            fecha: Date.now()
         });
         setRecargarCuota(recargarCuota + 1)
         alert("Cobro exitoso")
@@ -291,7 +303,7 @@ const Provider = ({ children }) => {
     const [propsModalModificarCuota, setPropsModalModificarCuota] = useState();
     const modalModificarCuota = (props) => {
         setPropsModalModificarCuota(props)
-      //  setBanderaModal(false)
+        //  setBanderaModal(false)
     }
     //------------------Modificar tipo de cuota
     async function editCuota(props) {
@@ -310,6 +322,38 @@ const Provider = ({ children }) => {
         });
 
     }
+
+    //////////////////////////////ESTADISTICAS//////////////////////////////
+    const [datoEstadistico, setDatoEstadistico] = useState();
+    //declaramos estados para estadisticas
+    const [Masculino, setMasculino] = useState([1]);
+    const [Femenino, setFemenino] = useState([1]);
+    const [Menos5, setMenos5] = useState(4);
+    const [de6a18, setDe6a18] = useState(5);
+    const [de19a45, setDe19a45] = useState(6);
+    const [Masde45, setMasde45] = useState(7);
+
+    const [pracha, setPercha] = useState(0)
+    useEffect(() => {
+
+
+        const p = sociosAlternativo;
+        //const M = p.filter(b => b.genero == "Masculino").length;
+
+        // console.log(M);
+        setMasculino(p.filter(b => b.genero == "Masculino"))
+        setFemenino(p.filter(b => b.genero == "Femenino"))
+
+
+
+
+
+        const datosEstadisticos = { masculino: Masculino, femenino: Femenino, menos5: Menos5, de6a18: de6a18, de19a45: de19a45, mas45: Masde45 }
+        setDatoEstadistico(datosEstadisticos)
+        setPercha(datosEstadisticos)
+
+    }, [1], 2000);
+
     return (
         <CartContext.Provider value={{
             selecTipoSocio, tipoSocioSelect, conectarse, desconectarse,
@@ -317,7 +361,7 @@ const Provider = ({ children }) => {
             propsModal, banderaModal, banderaModalCuotas, cerraBanderaModalCuotas, addSocio, pausarSocio, recategorizar, conexion,
             listaSocios, sociosAlternativo, cuotasocio, modalModificarCuota, editCuota, propsModalModificarCuota
             , recargarCuota, buscarDeudas, hayDeuda,
-            modEditarSocio, updateSocio, editarSocio
+            modEditarSocio, updateSocio, editarSocio, datoEstadistico, uploadFile
         }}>
             {children}
         </CartContext.Provider>

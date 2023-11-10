@@ -1,4 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.itemMenu{
+color: white;
+margin: 10px;
+text-decoration: dashed;
+}
 .menuDesplegable{
     width: 100%;
-    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.titulo{
+    font-size: large;
 }

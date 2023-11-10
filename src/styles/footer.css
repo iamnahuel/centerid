@@ -1,42 +1,57 @@
 
+.footerContainer{
+    position:relative;
+    z-index: 1;
+}
+/***********ESTILOS ESPONSOR***********/
 .footerEsponsor {
     background: #0B3073;
     width: 100%;
-    height: 120px;
+    height: 100%;
+    padding: 20px;
     display: flex;
+    /*alineamos los elementos de forma horizontal*/
     justify-content: space-around;
+    /*alineamos los elemnetos de forma vertival*/
     align-items: center;
-    
+   
+
 }
 
-.iconosEsponsor {
-    justify-content: center;
+.aa{
+    text-align: center;
+    /*alineamos los elemnetos de forma vertival*/
+    align-items: center;
+    width: 25%;  
 }
 
 .adidas {
-    width:  8%;
-    margin-right: 50px;
+    width: 30%;
+  
+
 }
 
 .quilmes {
-    width:  15%;
-    margin-right: 50px;
+    width: 40%;
+   
 }
 
 .bancoPampa {
-    width: 15%;
-    margin-right: 50px;
+    width: 40%;
+    
 }
 
 .cooprol {
-    width:  8%;
-    margin-right: 50px;
+    width: 30%;
+  
 }
 
+/***********ESTILOS REDES***********/
 .footer {
     background: #003290;
     width: 100%;
-    height: 80px;
+    height: 100%;
+    padding: 20px;
     display: flex;
     /*alineamos los elementos de forma horizontal*/
     justify-content: space-around;
@@ -73,7 +88,7 @@
 
 .iconosFooter:hover {
     color: white;
-    background-color:  #f39608;
+    background-color: #f39608;
     padding: 3px;
     border-radius: 50%;
 

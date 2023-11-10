@@ -12,7 +12,7 @@ const CuotaSocial = () => {
         <div className="contenedorCuotasSociales">
             <div className="wallpaperCuotasSociales">
                 <img src={wallpaperCuota} alt="" className="wallpaperSocios" />
-                <div className="tituloCuotasSociales"><p><b> UN PLAN A TU MEDIDA </b></p></div>
+                <div className="tituloCuotasSociales"><p><b> P E R T E N E C E R </b></p></div>
             </div>
             <div className="contenedorCuotas">
                 {tipoCuota.map(item => (

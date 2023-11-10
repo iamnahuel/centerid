@@ -4,6 +4,7 @@ import { useContext, useState, useEffect } from "react";
 import ListadoSocios from "./ListadoSocios";
 import "../styles/buscarSocio.css"
 
+
 const BuscarSocio = () => {
 
     //llamamos al contexto
@@ -89,9 +90,10 @@ const BuscarSocio = () => {
     }
 
     return (
-        <div className="contenedorAgregarSocio">
+
+        <div className="contenedorBuscarSocio">
             {bandera ?
-                <div className="col-md-9">
+                <div className="col-md-12">
                     <label className="infoFormulario">Ingrese alguno de los siguientes datos del socio:</label>
                     <form onSubmit={e => {
                         e.preventDefault();
@@ -121,8 +123,14 @@ const BuscarSocio = () => {
                         </div>
                     </form>
                 </div>
-                : <div><h6><b className="cerrarBusqueda" onClick={() =>{setBandera(true)} }>REALIZAR OTRA BUSQUEDA</b></h6><ListadoSocios busqueda={resultado} /></div>}
+                : <div className="resultadoBusqueda">
+                    <p className="h6 cerrarBusqueda" onClick={() => { setBandera(true) }}>REALIZAR OTRA BUSQUEDA</p>
+                    <div className="contenedorTabla">
+                        <ListadoSocios busqueda={resultado} />
+                    </div>
+                </div>}
         </div>
+
     )
 }
 export default BuscarSocio;

@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -7,6 +7,7 @@
 .PerfilSocio {
     display: flex;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .PortadaSocio {
@@ -16,14 +17,20 @@
     border-radius: 10px;
     padding-top: 40px;
     text-align: center;
-   
-   
+
+
 }
 
 .imgPerfilSocio {
     border-radius: 100%;
     height: 120px;
+    width: 120px;
+    cursor: pointer;
 
+}
+
+.imgPerfilSocio:hover {
+    opacity: 80%;
 }
 
 .tipoSocioPerfil {
@@ -31,9 +38,11 @@
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
 }
-.datosTipoSocio{
+
+.datosTipoSocio {
     color: black;
 }
+
 .btnPortadaSocio {
     background-color: red;
     color: white;
@@ -43,24 +52,78 @@
     border: none;
     margin-top: 7px;
 }
-.nombrePerfilSocio{
+
+.nombrePerfilSocio {
     color: red;
 }
 
+/**********File Inputs**********/
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
 /********* ESTILOS UPDATESOCIO *********/
-.contUpdateSocio{
+.contUpdateSocio {
     margin: 20px;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
-.updateSocio{
+
+.updateSocio {
     background-color: white;
     border-radius: 10px;
     padding: 10px;
     color: black;
-    
-}
-.btnUpdateSocios{
-    margin: 10px;
 
 }
+
+.btnUpdateSocios {
+    margin: 10px;
+    color: white;
+
+
+}
+
+.btnUpdateSocio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/********* ESTILOS DATOS SOCIOS *********/
+
+/********* ESTILOS UPDATE SOCIO *********/
+
+/********* MEDIA QUERRY *********/
+
+@media only screen and (min-width: 900px) {}
+
+@media only screen and (max-width: 600px) {
+    .imgPerfilSocio {
+        display: none;
+    }
+
+    .datosSocios {
+        font-size: 13px;
+    }
+
+    .btnPortadaSocio {
+        font-size: 10px;
+    }
+
+    .introUpdateSocio {
+        font-size: 13px;
+    }
+
+    .btnUpdateSocios {
+        font-size: 50%;
+        width: 35%;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {}
